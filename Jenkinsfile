@@ -1,10 +1,21 @@
 pipeline {
-    agent { docker { image 'node:16.17.1-alpine' } }
-    stages {
-        stage('build') {
-            steps {
-                sh 'node --version'
-            }
+  agent any
+  stages {
+    stage('Deploy to s3') {
+      when {
+        branch 'master'
+      }
+      steps {
+        echo 'Deploying to AWS s3 bucket.'
+        withAWS(region:'us-east-1', credentials:'aws-creds') {
+          s3Delete(bucket: 'jenkins-react', path:'**/*')
+          s3Upload(bucket: 'jenkins-react', includePathPattern:'**/*')
         }
+      }
     }
+  }
+    // always {
+    //   slackSend ...
+    // }
+  }
 }
