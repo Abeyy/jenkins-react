@@ -14,8 +14,4 @@ pipeline {
       }
     }
   }
-    // always {
-    //   slackSend ...
-    // }
-  }
 }
