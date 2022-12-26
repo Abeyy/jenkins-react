@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Deploy to s3') {
       when {
-        branch 'master'
+        branch 'main'
       }
       steps {
         echo 'Deploying to AWS s3 bucket.'
