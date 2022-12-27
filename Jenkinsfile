@@ -21,11 +21,9 @@ pipeline {
       }
       steps {
         echo 'Deploying to AWS s3 bucket.'
-        def pwd = pwd()
-        echo pwd
         withAWS(region:'us-west-2', credentials:'aws-creds') {
           s3Delete(bucket: 'jenkins-react', path:'/')
-          s3Upload(bucket: 'jenkins-react', path: "", includePathPattern: '**/*', workingDir: '/build')
+          s3Upload(bucket: 'jenkins-react', path: "", includePathPattern: '**/*', workingDir: '${WORKSPACE}/build')
         }
       }
     }
