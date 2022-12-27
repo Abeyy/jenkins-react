@@ -1,7 +1,7 @@
 pipeline {
   agent any
   options {
-      timeout(time: 2, unit: 'MINUTE') 
+      timeout(time: 2, unit: 'MINUTES') 
   }
   stages {
     stage('Deploy to s3') {
