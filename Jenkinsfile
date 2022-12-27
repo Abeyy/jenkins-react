@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  options {
+      timeout(time: 2, unit: 'MINUTE') 
+  }
   stages {
     stage('Deploy to s3') {
       when {
