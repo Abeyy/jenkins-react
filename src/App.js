@@ -15,6 +15,7 @@ function App() {
           new test.
           one more.
           restarted.
+          a trigger manually.
         </p>
         <a
           className="App-link"
