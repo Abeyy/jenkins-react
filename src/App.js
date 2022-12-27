@@ -8,15 +8,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
-          Does the webhook work?
-          Another test change. test
-          test change.
-          testy
-          new test.
-          one more.
-          restarted.
-          a trigger manually.
-          test webhook params which i hate.
+          Automated deployment.
         </p>
         <a
           className="App-link"
