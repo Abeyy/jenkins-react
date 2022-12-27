@@ -14,6 +14,7 @@ function App() {
           testy
           new test.
           one more.
+          restarted.
         </p>
         <a
           className="App-link"
