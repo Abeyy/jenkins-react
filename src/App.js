@@ -8,8 +8,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
-          Does Jenkins build well?
-          Hi Tiffany
+          Does the webhook work?
         </p>
         <a
           className="App-link"
