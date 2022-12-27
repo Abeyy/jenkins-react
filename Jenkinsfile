@@ -4,6 +4,11 @@ pipeline {
       timeout(time: 2, unit: 'MINUTES') 
   }
   stages {
+    stage('Build') {
+      steps {
+        sh 'npm run build'
+      }
+    }
     stage('Deploy to s3') {
       when {
         branch 'main'
