@@ -9,7 +9,7 @@ pipeline {
         echo 'Deploying to AWS s3 bucket.'
         withAWS(region:'us-west-2', credentials:'aws-creds') {
           s3Delete(bucket: 'jenkins-react', path:'/')
-          s3Upload(bucket: 'jenkins-react', includePathPattern:'build/**', path:'/Users/abeyjoy/projects/jenkins-react/build')
+          s3Upload(bucket: 'jenkins-react', includePathPattern:'src' path:'/')
         }
       }
     }
